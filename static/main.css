@@ -9,10 +9,16 @@ h1 {
     width: 400px;
 }
 
-table {
-    border: red;
+div.form {
+    display: block;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
     margin: 0 auto;
-    width: 250px;
+    text-align: center;
+    width: 100%;
 }
 
 img.center {
