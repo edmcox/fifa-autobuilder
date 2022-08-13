@@ -1,0 +1,16 @@
+form{ 
+    margin: 0 auto; 
+    width: 250px;
+}
+
+h1{
+    text-align:center;
+    margin: 0 auto; 
+    width: 400px;
+}
+
+table{
+    border: red;
+    margin: 0 auto; 
+    width: 250px;
+}
