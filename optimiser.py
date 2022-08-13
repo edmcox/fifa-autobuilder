@@ -13,8 +13,6 @@ import matplotlib.pyplot as plt
 import copy
 import cloudscraper
 
-# def chemistry_checker(futbin_squad,subs=False,top_n=10,save=False):
-
 
 def chemistry_checker(futbin_squad, subs=False, top_n=10):
 
