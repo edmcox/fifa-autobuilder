@@ -12,7 +12,10 @@ def form():
 @app.route("/", methods=["POST"])
 def form_post():
     squad_link = request.form["FUTBIN Squad Link"]
-    squads = chemistry_checker(squad_link)
+    top_n = request.form.get("top_n")
+    subs = request.form.get("subs")
+
+    squads = chemistry_checker(squad_link, top_n=int(top_n), subs=bool(subs))
 
     if isinstance(squads, str):
         return squads
