@@ -9,6 +9,12 @@ h1 {
     width: 400px;
 }
 
+h3 {
+    text-align: center;
+    margin: 0 auto;
+    width: 400px;
+}
+
 div.form {
     display: block;
     text-align: center;
