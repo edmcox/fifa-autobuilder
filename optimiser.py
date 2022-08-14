@@ -366,7 +366,7 @@ def chemistry_checker(futbin_squad, subs=False, top_n=10):
 
         best_comb_chem = sorted(comb_list, key=lambda i: i["chemistry"], reverse=True)
 
-        fig = plt.figure(figsize=(12, (24 * (top_n / 10))))
+        fig = plt.figure(figsize=(12, (5 * math.ceil(top_n / 2))))
 
         rank = 0
         for i in range(top_n):
