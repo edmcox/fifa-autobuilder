@@ -12,6 +12,7 @@ import re
 import matplotlib.pyplot as plt
 import copy
 import cloudscraper
+import math
 
 
 def chemistry_checker(futbin_squad, subs=False, top_n=10):
@@ -389,7 +390,7 @@ def chemistry_checker(futbin_squad, subs=False, top_n=10):
 
             H = nx.relabel_nodes(G, mapping)
 
-            ax = fig.add_subplot(int((top_n / 2)), 2, int(i + 1))
+            ax = fig.add_subplot(math.ceil(top_n / 2), 2, int(i + 1))
             nx.draw(
                 H,
                 graph_pos,
