@@ -215,7 +215,7 @@ def chemistry_checker(futbin_squad, subs=False, top_n=10):
     with open("formations.json") as f:
         formations_json = json.load(f)
 
-    print("Possible combinations:", len(players_list) * len(formations_json))
+    poss_combs = len(players_list) * len(formations_json)
 
     comb_list = []
     for players in players_list:
@@ -417,4 +417,4 @@ def chemistry_checker(futbin_squad, subs=False, top_n=10):
             ax.set_title(rank, loc="left", fontsize=20)
 
         plt.savefig("static/images/plot.png")
-        return
+        return poss_combs
