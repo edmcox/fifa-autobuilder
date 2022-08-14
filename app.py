@@ -20,7 +20,9 @@ def form_post():
     if isinstance(squads, str):
         return squads
 
-    return render_template("plot.html", url="/static/images/plot.png")
+    return render_template(
+        "plot.html", poss_combs=str(squads), url="/static/images/plot.png"
+    )
 
 
 if __name__ == "__main__":
