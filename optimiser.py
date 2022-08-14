@@ -366,7 +366,9 @@ def chemistry_checker(futbin_squad, subs=False, top_n=10):
 
         best_comb_chem = sorted(comb_list, key=lambda i: i["chemistry"], reverse=True)
 
-        fig = plt.figure(figsize=(12, (5 * math.ceil(top_n / 2))))
+        width = 6 if top_n == 1 else 12
+
+        fig = plt.figure(figsize=(width, (5 * math.ceil(top_n / 2))))
 
         rank = 0
         for i in range(top_n):
@@ -390,7 +392,9 @@ def chemistry_checker(futbin_squad, subs=False, top_n=10):
 
             H = nx.relabel_nodes(G, mapping)
 
-            ax = fig.add_subplot(math.ceil(top_n / 2), 2, int(i + 1))
+            cols = 1 if top_n == 1 else 2
+
+            ax = fig.add_subplot(math.ceil(top_n / 2), cols, int(i + 1))
             nx.draw(
                 H,
                 graph_pos,
