@@ -8,7 +8,10 @@
 <div class="form">
     <form method="POST">
         <div>
-            <input id="squad" name="FUTBIN Squad Link" placeholder="FUTBIN Squad Link">
+            <input id="squad" name="FUTBIN Squad Link" placeholder="FUTBIN Squad Link" 
+            pattern="https://www.futbin.com/.*/squad/.*" required 
+            oninvalid="this.setCustomValidity('Must be a valid FUTBIN squad link.')"
+            oninput="this.setCustomValidity('')"/>
             <input name="FUTBIN Squad Link" type="submit">
         </div>
 
