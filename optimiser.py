@@ -420,5 +420,5 @@ def chemistry_checker(futbin_squad, subs=False, top_n=10):
             )
             ax.set_title(rank, loc="left", fontsize=20)
 
-        plt.savefig("static/images/plot.png")
+        plt.savefig("static/images/plot.png", bbox_inches="tight")
         return poss_combs
