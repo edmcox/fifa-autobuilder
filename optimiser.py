@@ -13,6 +13,8 @@ import matplotlib.pyplot as plt
 import copy
 import cloudscraper
 import math
+import os
+from os import path
 
 
 def chemistry_checker(futbin_squad, subs=False, top_n=10):
@@ -419,6 +421,9 @@ def chemistry_checker(futbin_squad, subs=False, top_n=10):
                 transform=ax.transAxes,
             )
             ax.set_title(rank, loc="left", fontsize=20)
+
+        if not os.path.exists("static/images"):
+            os.mkdir("static/images")
 
         plt.savefig("static/images/plot.png", bbox_inches="tight")
         return poss_combs
